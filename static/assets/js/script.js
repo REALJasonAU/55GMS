@@ -2,25 +2,10 @@ function script(text) {
   console.log(
     "%cScript Injection",
     "color: cyan; font-weight: 600; background: black; padding: 0 5px; border-radius: 5px",
-    text
-  );
-}
+    }
 
-// ====================================
-// SCRIPT INJECTION
-// ====================================
-const newScript = document.createElement("script");
-newScript.setAttribute(
-  "src",
-  "https://www.googletagmanager.com/gtag/js?id=G-N0LG27M8L8"
-);
-const inlinegascript = document.createElement("script");
-inlinegascript.innerHTML = `window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-N0LG27M8L8');`;
-document.head.append(newScript, inlinegascript);
-script("Injected script 1/3");
+    // Ads disabled: removed automatic Adsense injection to stop random popups
+    console.log("Ads disabled by maintainer; Adsense injection removed.");
 
 script("Injected script 2/3 (USE AN AD BLOCKER PLEASE)");
 
